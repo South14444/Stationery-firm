@@ -77,10 +77,3 @@ VALUES (1,N'ООО.Вам Бан', 1,10,1000),
 
 
 
-
-select AVG(P.Quantity)
-from Sale as S
-join Manager as M On S.ManagerId=S.ID
-join Product as P ON S.SupplierId=P.ID
-join Type_of_product as T ON P.Type_of_productId=T.ID
-group by P.Type_of_productId
